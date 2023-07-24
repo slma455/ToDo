@@ -1,0 +1,58 @@
+<div class="bg-dark p-5 text-center text-light">
+    <div class="container">
+        <div class="row">
+            <h1>To-do list</h1>
+      
+            <div class="col-sm-6 col-md-8">
+                <input type="text" class="form-control "  placeholder="enter your task"  [(ngModel)]="inputValue">
+
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <button class="btn btn-warning w-100 " (click)="addToList()">Add</button>
+
+            </div>
+        </div>
+         <div class="row mt-4 text-dark" *ngFor="let todo of todosList ; let i = index">
+            <div class="col-sm-6 col-md-8">
+                <p class="bg-secondary w-100 p-2 rounded">{{todo}}</p>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <button class="btn btn-outline-danger w-100" (click)="removeToDo(i)">Remove</button>
+            </div>
+        </div> 
+
+      
+       
+
+
+
+
+    <!-- <h2 *ngIf="flag; else ourDiv" >login component </h2>
+   <h2 *ngIf="!flag">Reg component</h2> -->
+    <!-- <ng-template #ourDiv>
+        <div>
+            <button>Login now</button>
+        </div>
+    </ng-template>  -->
+    <!-- <input type="text" [(ngModel)]="inputValue"  class="form-control" placeholder="Enter your name">
+    <input type="text" class="form-control" placeholder="Enter your age" [(ngModel)]="inputAge">
+    <select [(ngModel)] ="selectValue">
+        <option>HTML</option>
+        <option >CSS</option>
+        <option >JS</option>
+    </select>
+    <p class="lead fw-bold"> Your name is  {{ inputValue}}  n your age is  {{inputAge}} and your course is {{selectValue}}</p> -->
+    <!-- <div class="bg-light p-5 text-center" *ngFor="let item of studentNames; let i = index ">
+        <div class="bg-dark p-3 text-light mb-2">
+            <h2>student id : {{i + 1}}</h2>
+            <h1>{{item}}</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, odit?</p>
+
+        </div>
+
+    </div>
+    <h2 *ngFor="let item of studentNames; let i = index">{{item}}  {{i}}</h2> -->
+  
+
+</div>
+</div>
